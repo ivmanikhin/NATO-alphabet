@@ -2,8 +2,7 @@ import pandas as pd
 
 # Create a dictionary in this format:
 
-alphabet = pd.read_csv('nato_phonetic_alphabet.csv')
-dict_list = alphabet.to_dict('split')['data']
+dict_list = pd.read_csv('nato_phonetic_alphabet.csv').to_dict('split')['data']
 print(dict_list)
 nato_dict = {item[0]: item[1] for item in dict_list}
 print(nato_dict)
