@@ -2,9 +2,9 @@ import pandas as pd
 
 # Create a dictionary in this format:
 
-dict_list = pd.read_csv('nato_phonetic_alphabet.csv').to_dict('split')['data']
-print(dict_list)
-nato_dict = {item[0]: item[1] for item in dict_list}
+# dict_list = pd.read_csv('nato_phonetic_alphabet.csv').to_dict('split')['data']
+# print(dict_list)
+nato_dict = dict(pd.read_csv('nato_phonetic_alphabet.csv').to_dict('split')['data'])
 print(nato_dict)
 
 # Create a list of the phonetic code words from a word that the user inputs.
